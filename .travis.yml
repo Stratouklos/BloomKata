@@ -2,6 +2,9 @@ language: python
 python:
   - "3.4"
 
+install:
+  - pip install
+
 script: py.test tests
 
 branches:
