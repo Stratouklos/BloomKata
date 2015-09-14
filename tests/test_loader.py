@@ -1,6 +1,9 @@
-__author__ = 'exak'
 from bloom_kata import loader
-import os
+from bloom_kata import wordlist
+
+__author__ = 'exak'
+
 
 def test_load():
-    assert loader.load() == 338781
+    sut = loader.Loader(["a", "b", "c"])
+    assert len(sut) == 3

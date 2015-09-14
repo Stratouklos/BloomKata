@@ -1,7 +1,10 @@
 __author__ = 'exak'
 
-from bloom_kata import wordlist
 
-def load():
-    var = wordlist.words.split()
-    return len(var)
+class Loader:
+
+    def __init__(self, items):
+        self.item_hashes = list(map(hash, items))
+
+    def __len__(self):
+        return len(self.item_hashes)
