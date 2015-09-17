@@ -1,5 +1,4 @@
 from bloom_kata import loader
-from bloom_kata import wordlist
 
 __author__ = 'exak'
 
