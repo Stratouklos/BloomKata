@@ -1,12 +1,17 @@
 __author__ = 'exak'
+from bitstring import BitArray
+from hashlib import md5
 
 
 class BloomFilter:
-    filter = bytearray
+    def __init__(self, size, hash_count):
+        self.array = BitArray(length=size)
+        self.hash_list = [md5() in range(hash_count)]
 
-    def __init__(self, size, hashes_count):
-        self.hashes_count = hashes_count
-        self.size = size
+    def load(self, items):
+        for item in items:
+            self.array.set(1, [h.real for h in self.hash_list])
 
-    def insert(self, item):
-        print(item)
+    def __contains__(self, item):
+        a = [h.real for h in self.hash_list]
+        return self.array[a]
