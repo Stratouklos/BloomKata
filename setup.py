@@ -8,5 +8,5 @@ setup(name='Bloomkata',
       description='Bloom filter kata',
       author='Stratos Xakoustos',
       url='https://github.com/Stratouklos/BloomKata',
-      packages=['bloom_kata'],
+      packages=['bloom_kata'], requires=['bitstring']
       )
