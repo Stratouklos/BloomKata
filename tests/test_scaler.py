@@ -25,5 +25,5 @@ def test_a_random_hash():
     assert 256 < scaler.scale_down(m.hexdigest(), 65535) < 65535
 
 
-def test_a_wrap_arround():
+def test_a_wrap_around():
     assert scaler.scale_down('ffff', 65535 - 335) == 335
