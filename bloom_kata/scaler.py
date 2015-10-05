@@ -1,10 +1,4 @@
-import sys
-
 __author__ = 'exak'
-
-
-class MinimumScaleError(Exception):
-    pass
 
 
 def scale_down(array_of_hex_digits, max_size):
