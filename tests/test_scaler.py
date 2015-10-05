@@ -19,7 +19,11 @@ def test_get_top_scaled_hash():
     assert scaler.scale_down('ff', 256) == 255
 
 
-def test_hash_at_higher_scale():
+def test_a_random_hash():
     m = sha256()
     m.update('adfa21341231sdasfc'.encode('utf-8'))
     assert 256 < scaler.scale_down(m.hexdigest(), 65535) < 65535
+
+
+def test_a_wrap_arround():
+    assert scaler.scale_down('ffff', 65535 - 335) == 335

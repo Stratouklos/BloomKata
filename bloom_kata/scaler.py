@@ -9,7 +9,7 @@ def scale_down(array_of_hex_digits, max_size):
         raise ValueError("The minimum hexstring length is 1")
     index = int(array_of_hex_digits[0:digits], 16)
     if index > max_size:
-        return max_size - index
+        return index - max_size
     else:
         return index
 
