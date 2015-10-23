@@ -1,9 +1,6 @@
 from bloom_kata import ObjectIndexer
-from hashlib import md5
 
 __author__ = 'exak'
-
-f = md5()
 
 sut = ObjectIndexer.ObjectIndexer(256)
 
