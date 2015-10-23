@@ -15,7 +15,7 @@ def test_empty_digit_array_throws_error():
         scaler.scale_down(None, 256)
 
 
-def test_get_top_scaled_hash():
+def test_scale_a_high_value():
     assert scaler.scale_down('ff', 256) == 255
 
 
@@ -25,5 +25,5 @@ def test_a_random_hash():
     assert 256 < scaler.scale_down(m.hexdigest(), 65535) < 65535
 
 
-def test_a_wrap_around():
+def test_a_wrap_around_case():
     assert scaler.scale_down('ffff', 65535 - 335) == 335
